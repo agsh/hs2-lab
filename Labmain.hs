@@ -1,3 +1,4 @@
+-- Кулаков Роман К7-221 вариант 9 (сортирокой по iq)
 module Main where
 import Students
 

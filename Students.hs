@@ -1,4 +1,4 @@
-module Lab2
+module Students
 ( Student
 , name
 , surname

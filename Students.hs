@@ -1,4 +1,4 @@
-module Lab2
+module Students
 ( Student
 , name
 , surname
@@ -12,9 +12,19 @@ module Lab2
 , french
 , discrete_mathematics
 , programming 
+, student_pupkin
 ) where
 
 data Student = St {name, surname :: String, sex :: Char, day, month, year :: Int, group :: Int, iq :: Int} deriving (Show, Read)
+
+instance Eq Student where
+  (==) x  y = surname x == surname y
+
+instance Ord Student where
+  (>) x  y = surname x > surname y
+  (<) x  y = surname x < surname y
+
+student_pupkin = St {name="Василий", surname="Пупкин", sex='м', day=19, month=2, year=1991, group=313, iq=120};
 
 students = [
   St {name="Максим", surname="Чуркин", sex='m', day=13, month=12, year=1991, group=331, iq=100},
